@@ -395,4 +395,9 @@ for data_i in data:
     verbose_answer = split_answer[0].strip()
     raw_answer = split_answer[1].strip()
     exemplar_questions = exemplar_questions._append({'question': data_i['question'], 'answer': verbose_answer,'raw_answer':raw_answer}, ignore_index=True)
-exemplar_questions.to_csv('data/training_exemplars.csv')
+# exemplar_questions.to_csv('data/training_exemplars.csv')
+
+performance_data = pd.DataFrame(columns=['text','score'])
+performance_data = performance_data._append({'text':'Let’s figure it out!','score':61},ignore_index=True)
+performance_data = performance_data._append({'text':'Let’s solve the problem.','score':63},ignore_index=True)
+performance_data.to_csv('data/performance.csv')
