@@ -1,0 +1,5 @@
+/.env
+/data
+/performance2.csv
+/testo.py
+/__pycache__
